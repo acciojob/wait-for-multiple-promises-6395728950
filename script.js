@@ -2,10 +2,8 @@ const tbody = document.getElementById('output');
 tbody.innerHTML=`<tr>Loading...</tr>`
 const promise1 = ()=>{
 	return new Promise((resolve)=>{
-		let val = Math.floor(Math.random() * 3).toFixed(3);
-		if(val<1.000){
-			val=1.000
-		}
+		let val = Math.floor(Math.random() * 3)+1;
+		 
 		setTimeout(()=>{
 			resolve(parseFloat(val));
 		},val*1000)
@@ -14,10 +12,8 @@ const promise1 = ()=>{
 
 const promise2 = ()=>{
 	return new Promise((resolve)=>{
-		let val = Math.floor(Math.random() * 3).toFixed(3);
-		if(val<1.000){
-			val=1.000
-		}
+		let val = Math.floor(Math.random() * 3)+1;
+		 
 		setTimeout(()=>{
 			resolve(parseFloat(val));
 		},val*1000)
@@ -25,10 +21,8 @@ const promise2 = ()=>{
 };
 const promise3 = ()=>{
 	return new Promise((resolve)=>{
-		let val = Math.floor(Math.random() * 3).toFixed(3);
-		if(val<1.000){
-			val=1.000
-		}
+		let val = Math.floor(Math.random() * 3)+1;
+		 
 		setTimeout(()=>{
 			resolve(parseFloat(val));
 		},val*1000)
@@ -43,7 +37,7 @@ let total =0;
 	const td1 = document.createElement('td');
 	const td2 = document.createElement('td');
 	td1.textContent=`Promise ${index+1}`;
-	td2.textContent=`${val.toFixed(3)}`;
+	td2.textContent=`${val}`;
 	total+=val;
 	tr.appendChild(td1);
 	tr.appendChild(td2);
